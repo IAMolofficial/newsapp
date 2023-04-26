@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react'
+import NavBar from './components/navbar.js';
+import News from './components/news.js';
+import LoadingBar from 'react-top-loading-bar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    progress: 0,
+    category: 'General'
+  }
+
+  setProgress = (progress) => {
+    this.setState({ progress: progress })
+  }
+
+  handleCategoryChange = (category) => {
+    this.setState({ category: category });
+  }
+
+  render() {
+    const { category } = this.state;
+
+    return (
+      <div>
+        <LoadingBar
+          color='#0ef'
+          progress={this.state.progress}
+        />
+        <NavBar onCategoryChange={this.handleCategoryChange} />
+        <div>
+          <News setProgress={this.setProgress}  key={category} PageSize={6} country='in' category={category} />
+        </div>
+      </div>
+    )
+  }
 }
-
-export default App;
