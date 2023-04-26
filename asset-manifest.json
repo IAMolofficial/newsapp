@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/newsapp/static/css/main.483dc8af.css",
+    "main.js": "/newsapp/static/js/main.c8d89234.js",
+    "static/js/787.09daee94.chunk.js": "/newsapp/static/js/787.09daee94.chunk.js",
+    "static/media/OnlyNewz-logos_transparent.png": "/newsapp/static/media/OnlyNewz-logos_transparent.20bfdb74421e017bbeec.png",
+    "index.html": "/newsapp/index.html",
+    "main.483dc8af.css.map": "/newsapp/static/css/main.483dc8af.css.map",
+    "main.c8d89234.js.map": "/newsapp/static/js/main.c8d89234.js.map",
+    "787.09daee94.chunk.js.map": "/newsapp/static/js/787.09daee94.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.483dc8af.css",
+    "static/js/main.c8d89234.js"
+  ]
+}
